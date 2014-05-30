@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SliceCalendarAgentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ErrorLogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="RawTransactions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Data" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Transactions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="txn_status" Type="nvarchar" MaxLength="50" />
+          <Property Name="txn_id" Type="nvarchar" MaxLength="100" />
+          <Property Name="txn_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="custom" Type="nvarchar" MaxLength="255" />
+          <Property Name="test_ipn" Type="nvarchar" MaxLength="50" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="last_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="contact_phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="address_street" Type="nvarchar" MaxLength="100" />
+          <Property Name="address_city" Type="nvarchar" MaxLength="100" />
+          <Property Name="address_state" Type="nvarchar" MaxLength="100" />
+          <Property Name="address_zip" Type="nvarchar" MaxLength="100" />
+          <Property Name="verify_sign" Type="nvarchar" MaxLength="100" />
+          <Property Name="address_name" Type="nvarchar" MaxLength="128" />
+          <Property Name="payer_business_name" Type="nvarchar" MaxLength="128" />
+          <Property Name="payer_email" Type="nvarchar" MaxLength="128" />
+          <Property Name="payer_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="auth_amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="auth_exp" Type="nvarchar" MaxLength="50" />
+          <Property Name="auth_status" Type="nvarchar" MaxLength="50" />
+          <Property Name="fraud_managment_pending_filters_x" Type="nvarchar" MaxLength="128" />
+          <Property Name="item_namex" Type="nvarchar" MaxLength="128" />
+          <Property Name="item_numberx" Type="nvarchar" MaxLength="128" />
+          <Property Name="mc_fee" Type="nvarchar" MaxLength="50" />
+          <Property Name="mc_gross" Type="nvarchar" MaxLength="50" />
+          <Property Name="memo" Type="nvarchar" MaxLength="255" />
+          <Property Name="num_cart_items" Type="nvarchar" MaxLength="100" />
+          <Property Name="option_name1" Type="nvarchar" MaxLength="64" />
+          <Property Name="option_name2" Type="nvarchar" MaxLength="64" />
+          <Property Name="option_selection1_1" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_1" Type="nvarchar" MaxLength="200" />
+          <Property Name="payer_status" Type="nvarchar" MaxLength="50" />
+          <Property Name="payment_date" Type="nvarchar" MaxLength="28" />
+          <Property Name="payment_status" Type="nvarchar" MaxLength="50" />
+          <Property Name="payment_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="quantity" Type="nvarchar" MaxLength="50" />
+          <Property Name="reason_code" Type="nvarchar" MaxLength="50" />
+          <Property Name="transaction_entity" Type="nvarchar(max)" />
+          <Property Name="option_selection1_2" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_3" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_4" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_5" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_2" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_3" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_4" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_5" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_6" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_7" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_8" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_9" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection1_10" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_6" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_7" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_8" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_9" Type="nvarchar" MaxLength="200" />
+          <Property Name="option_selection2_10" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityContainer Name="SliceCalendarAgentModelStoreContainer">
+          <EntitySet Name="ErrorLogs" EntityType="Self.ErrorLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RawTransactions" EntityType="Self.RawTransactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SliceCalendarAgentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SliceCalendarAgentEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ErrorLogs" EntityType="SliceCalendarAgentModel.ErrorLog" />
+          <EntitySet Name="RawTransactions" EntityType="SliceCalendarAgentModel.RawTransaction" />
+          <EntitySet Name="Transactions" EntityType="SliceCalendarAgentModel.Transaction" />
+        </EntityContainer>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RawTransaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="txn_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="txn_id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="txn_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="custom" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="test_ipn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contact_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address_street" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="address_city" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="address_state" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="address_zip" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="verify_sign" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="address_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="payer_business_name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="payer_email" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="payer_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="auth_amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="auth_exp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="auth_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fraud_managment_pending_filters_x" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="item_namex" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="item_numberx" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="mc_fee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mc_gross" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="memo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="num_cart_items" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="option_name1" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="option_name2" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="payer_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="payment_date" Type="String" MaxLength="28" FixedLength="false" Unicode="true" />
+          <Property Name="payment_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="payment_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="reason_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="transaction_entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_4" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_5" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_7" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_8" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_9" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection1_10" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_6" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_7" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_8" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_9" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="option_selection2_10" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SliceCalendarAgentModelStoreContainer" CdmEntityContainer="SliceCalendarAgentEntities">
+          <EntitySetMapping Name="ErrorLogs">
+            <EntityTypeMapping TypeName="SliceCalendarAgentModel.ErrorLog">
+              <MappingFragment StoreEntitySet="ErrorLogs">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RawTransactions">
+            <EntityTypeMapping TypeName="SliceCalendarAgentModel.RawTransaction">
+              <MappingFragment StoreEntitySet="RawTransactions">
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="SliceCalendarAgentModel.Transaction">
+              <MappingFragment StoreEntitySet="Transactions">
+                <ScalarProperty Name="option_selection2_10" ColumnName="option_selection2_10" />
+                <ScalarProperty Name="option_selection2_9" ColumnName="option_selection2_9" />
+                <ScalarProperty Name="option_selection2_8" ColumnName="option_selection2_8" />
+                <ScalarProperty Name="option_selection2_7" ColumnName="option_selection2_7" />
+                <ScalarProperty Name="option_selection2_6" ColumnName="option_selection2_6" />
+                <ScalarProperty Name="option_selection1_10" ColumnName="option_selection1_10" />
+                <ScalarProperty Name="option_selection1_9" ColumnName="option_selection1_9" />
+                <ScalarProperty Name="option_selection1_8" ColumnName="option_selection1_8" />
+                <ScalarProperty Name="option_selection1_7" ColumnName="option_selection1_7" />
+                <ScalarProperty Name="option_selection1_6" ColumnName="option_selection1_6" />
+                <ScalarProperty Name="option_selection2_5" ColumnName="option_selection2_5" />
+                <ScalarProperty Name="option_selection2_4" ColumnName="option_selection2_4" />
+                <ScalarProperty Name="option_selection2_3" ColumnName="option_selection2_3" />
+                <ScalarProperty Name="option_selection2_2" ColumnName="option_selection2_2" />
+                <ScalarProperty Name="option_selection1_5" ColumnName="option_selection1_5" />
+                <ScalarProperty Name="option_selection1_4" ColumnName="option_selection1_4" />
+                <ScalarProperty Name="option_selection1_3" ColumnName="option_selection1_3" />
+                <ScalarProperty Name="option_selection1_2" ColumnName="option_selection1_2" />
+                <ScalarProperty Name="transaction_entity" ColumnName="transaction_entity" />
+                <ScalarProperty Name="reason_code" ColumnName="reason_code" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+                <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="payer_status" ColumnName="payer_status" />
+                <ScalarProperty Name="option_selection2_1" ColumnName="option_selection2_1" />
+                <ScalarProperty Name="option_selection1_1" ColumnName="option_selection1_1" />
+                <ScalarProperty Name="option_name2" ColumnName="option_name2" />
+                <ScalarProperty Name="option_name1" ColumnName="option_name1" />
+                <ScalarProperty Name="num_cart_items" ColumnName="num_cart_items" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="mc_gross" ColumnName="mc_gross" />
+                <ScalarProperty Name="mc_fee" ColumnName="mc_fee" />
+                <ScalarProperty Name="item_numberx" ColumnName="item_numberx" />
+                <ScalarProperty Name="item_namex" ColumnName="item_namex" />
+                <ScalarProperty Name="fraud_managment_pending_filters_x" ColumnName="fraud_managment_pending_filters_x" />
+                <ScalarProperty Name="auth_status" ColumnName="auth_status" />
+                <ScalarProperty Name="auth_exp" ColumnName="auth_exp" />
+                <ScalarProperty Name="auth_amount" ColumnName="auth_amount" />
+                <ScalarProperty Name="payer_id" ColumnName="payer_id" />
+                <ScalarProperty Name="payer_email" ColumnName="payer_email" />
+                <ScalarProperty Name="payer_business_name" ColumnName="payer_business_name" />
+                <ScalarProperty Name="address_name" ColumnName="address_name" />
+                <ScalarProperty Name="verify_sign" ColumnName="verify_sign" />
+                <ScalarProperty Name="address_zip" ColumnName="address_zip" />
+                <ScalarProperty Name="address_state" ColumnName="address_state" />
+                <ScalarProperty Name="address_city" ColumnName="address_city" />
+                <ScalarProperty Name="address_street" ColumnName="address_street" />
+                <ScalarProperty Name="contact_phone" ColumnName="contact_phone" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="test_ipn" ColumnName="test_ipn" />
+                <ScalarProperty Name="custom" ColumnName="custom" />
+                <ScalarProperty Name="txn_type" ColumnName="txn_type" />
+                <ScalarProperty Name="txn_id" ColumnName="txn_id" />
+                <ScalarProperty Name="txn_status" ColumnName="txn_status" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

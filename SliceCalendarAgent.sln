@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliceCalendarAgent", "SliceCalendarAgent\SliceCalendarAgent.csproj", "{066AB6E9-A006-4654-8A68-41A71AE51732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliceCalendarAgent.Tests", "SliceCalendarAgent.Tests\SliceCalendarAgent.Tests.csproj", "{74955DB8-F2BB-4DDF-A840-1CDD83E6502D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.csproj", "{5B195601-CE6E-4BE1-8F1E-1ACB8DA26F0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{066AB6E9-A006-4654-8A68-41A71AE51732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066AB6E9-A006-4654-8A68-41A71AE51732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066AB6E9-A006-4654-8A68-41A71AE51732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066AB6E9-A006-4654-8A68-41A71AE51732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74955DB8-F2BB-4DDF-A840-1CDD83E6502D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74955DB8-F2BB-4DDF-A840-1CDD83E6502D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74955DB8-F2BB-4DDF-A840-1CDD83E6502D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74955DB8-F2BB-4DDF-A840-1CDD83E6502D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B195601-CE6E-4BE1-8F1E-1ACB8DA26F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B195601-CE6E-4BE1-8F1E-1ACB8DA26F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B195601-CE6E-4BE1-8F1E-1ACB8DA26F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B195601-CE6E-4BE1-8F1E-1ACB8DA26F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

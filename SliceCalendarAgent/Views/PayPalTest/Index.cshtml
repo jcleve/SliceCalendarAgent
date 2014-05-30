@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post" action="~/PayPal/IpnMessage">
+    <input type="hidden" name="txn_id" value="@Guid.NewGuid().ToString()">
+    <input type="hidden" name="txn_type" value="cart">
+    <input type="hidden" name="first_name" value="John">
+    <input type="hidden" name="last_name" value="dongy">
+    <input type="hidden" name="mc_gross" value="250.00">
+    <input type="hidden" name="payment_status" value="completed"/>
+    <input type="hidden" name="payment_date" value="05/21/2014" />
+    <input type="submit" value="Buy Now">
+</form>
+
+<form method="POST" action="~/PayPal/TestFileRead">
+    <input type="submit" value="Test File Read"/>
+</form>
